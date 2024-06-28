@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Normale</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=40px, user-scalable=no, minimum-scale=0.8, maximum-scale=0.8"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0/aframe/build/aframe-ar.js"></script>
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    <a-scene arjs="sourceType: webcam; debugUIEnabled: false;" embedded>
+
+      <a-marker-camera
+        type="pattern"
+        url="https://cdn.glitch.global/07a8060e-71ef-46a9-bf26-c764829224d0/pattern-Strahl.patt?v=1719217603959"
+        registerevents
+      ><a-entity
+        id="entity"
+        gltf-model="https://cdn.glitch.global/07a8060e-71ef-46a9-bf26-c764829224d0/Strahl.gltf?v=1719215812477"
+        scale="0.05 0.01 0.01"
+        position="0 0.5 0"    
+      ></a-entity></a-marker-camera>
+
+      
+    </a-scene>
+    <div class="center">
+      <button id="btnBigger" type="button" class="buttonStyle">+</button>
+      <button id="btnSmaller" type="button" class="buttonStyle">-</button>
+      <button id="btnRotateX" type="button" class="buttonStyle">90° x</button>
+      <button id="btnRotateY" type="button" class="buttonStyle">90° y</button>
+      <button button id="btnRotateZ" type="button" class="buttonStyle"> 90° z</button>
+    </div>
+
+  </body>
+</html>
